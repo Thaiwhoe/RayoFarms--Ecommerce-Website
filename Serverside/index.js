@@ -5,7 +5,7 @@ const dotenv = require('dotenv').config({path: "./var/.env"})
 const PORT = process.env.PORT|| 4000;
 const authRouter = require("./routes/authRoutes")
 const productRouter = require('./routes/productRoutes')
-const blogRouter = require("./routes/authRoutes")
+const blogRouter = require("./routes/blogRoutes")
 const morgan = require('morgan');
 dbConnect(process.env.MONGOOSE_URL)
 const bodyParser = require("body-parser");
