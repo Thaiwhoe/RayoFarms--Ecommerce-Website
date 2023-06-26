@@ -6,6 +6,8 @@ const PORT = process.env.PORT|| 4000;
 const authRouter = require("./routes/authRoutes")
 const productRouter = require('./routes/productRoutes')
 const blogRouter = require("./routes/blogRoutes")
+const categoryRouter = require('./routes/productCategoryRoutes');
+const blogCategoryRouter = require('./routes/blogCategoryRoutes');
 const morgan = require('morgan');
 dbConnect(process.env.MONGOOSE_URL)
 const bodyParser = require("body-parser");
@@ -22,6 +24,8 @@ app.use(cookieParser())
 app.use('/api/user', authRouter)
 app.use('/api/product', productRouter)
 app.use('/api/blog', blogRouter)
+app.use('/api/category', categoryRouter)
+app.use('/api/blog-category', blogCategoryRouter);
 
 
 //Error Handlers
