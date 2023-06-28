@@ -15,7 +15,6 @@ const couponRouter = require('./routes/couponRoutes');
 
 
 
-
 const morgan = require('morgan');
 dbConnect(process.env.MONGOOSE_URL)
 const bodyParser = require("body-parser");
